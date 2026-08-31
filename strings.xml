@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Screen Stream</string>
+
+    <string name="hint_rtmp_url">RTMP Server URL (e.g. rtmp://a.rtmp.youtube.com/live2)</string>
+    <string name="hint_stream_key">Stream Key</string>
+
+    <string name="label_resolution">Resolution</string>
+    <string name="label_fps">Frame Rate</string>
+    <string name="label_video_bitrate">Video Bitrate</string>
+    <string name="label_audio_source">Audio Source</string>
+    <string name="label_audio_bitrate">Audio Bitrate</string>
+
+    <string name="btn_start_stream">Start Live Stream</string>
+    <string name="btn_stop_stream">Stop Live Stream</string>
+
+    <string name="status_disconnected">Disconnected</string>
+    <string name="status_connecting">Connecting…</string>
+    <string name="status_live">● LIVE</string>
+    <string name="status_error">Error</string>
+    <string name="status_reconnecting">Reconnecting…</string>
+
+    <string name="notif_channel_name">Screen Streaming</string>
+    <string name="notif_title_streaming">Streaming screen</string>
+    <string name="notif_title_stopped">Stream stopped</string>
+    <string name="notif_action_stop">Stop Stream</string>
+
+    <string name="audio_mic_only">Microphone Only</string>
+    <string name="audio_internal_only">Internal Audio Only</string>
+    <string name="audio_both">Both (Mixed)</string>
+
+    <string name="error_permission_mic">Microphone permission is required to stream audio.</string>
+    <string name="error_missing_url">Enter a valid RTMP URL and stream key first.</string>
+    <string name="error_projection_denied">Screen capture permission was denied.</string>
+</resources>

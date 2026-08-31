@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Connection status badge -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#33000000"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="6dp"
+            android:text="@string/status_disconnected"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <!-- RTMP destination -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/hint_rtmp_url">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRtmpUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textUri" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/hint_stream_key">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etStreamKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Resolution -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/label_resolution"
+            android:textStyle="bold" />
+        <Spinner
+            android:id="@+id/spResolution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- FPS -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/label_fps"
+            android:textStyle="bold" />
+        <Spinner
+            android:id="@+id/spFps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Video bitrate -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/label_video_bitrate"
+            android:textStyle="bold" />
+        <Spinner
+            android:id="@+id/spVideoBitrate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Audio source -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/label_audio_source"
+            android:textStyle="bold" />
+        <RadioGroup
+            android:id="@+id/rgAudioSource"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/rbMicOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/audio_mic_only" />
+            <RadioButton
+                android:id="@+id/rbInternalOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/audio_internal_only" />
+            <RadioButton
+                android:id="@+id/rbBoth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/audio_both" />
+        </RadioGroup>
+
+        <!-- Audio bitrate -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/label_audio_bitrate"
+            android:textStyle="bold" />
+        <Spinner
+            android:id="@+id/spAudioBitrate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Start / stop -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnToggleStream"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/btn_start_stream"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>
